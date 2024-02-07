@@ -19,6 +19,7 @@ const AddCoffe = () => {
       photo,
     };
     form.reset();
+    console.log(newCoffe);
   };
   return (
     <div className="bg-[#F4F3F0] p-24">
