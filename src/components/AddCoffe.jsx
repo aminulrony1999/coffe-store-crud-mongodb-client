@@ -16,10 +16,20 @@ const AddCoffe = () => {
       taste,
       category,
       details,
-      photo,
+      photo
     };
     form.reset();
-    console.log(newCoffe);
+    fetch('http://localhost:5000/coffe',{
+        method : 'POST',
+        headers : {
+            'content-type' : 'application/json'
+        },
+        body : JSON.stringify(newCoffe)
+    })
+    .then(res => res.json())
+    .then(data =>{
+        console.log(data);
+    })
   };
   return (
     <div className="bg-[#F4F3F0] p-24">
