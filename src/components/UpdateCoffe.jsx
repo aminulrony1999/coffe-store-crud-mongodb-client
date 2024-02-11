@@ -14,7 +14,7 @@ const UpdateCoffe = () => {
     const category = form.category.value;
     const details = form.details.value;
     const photo = form.photo.value;
-    const newCoffe = {
+    const updatedCoffe = {
       name,
       quantity,
       supplier,
@@ -29,15 +29,15 @@ const UpdateCoffe = () => {
         headers : {
             'content-type' : 'application/json'
         },
-        body : JSON.stringify(newCoffe)
+        body : JSON.stringify(updatedCoffe)
     })
     .then(res => res.json())
     .then(data =>{
-        if(data.insertedId)
+        if(data.modifiedCount)
         {
             Swal.fire({
                 title: 'Success!',
-                text: 'Coffe added successfully',
+                text: 'Coffe data updated successfully',
                 icon: 'success',
                 confirmButtonText: 'Done'
               })
