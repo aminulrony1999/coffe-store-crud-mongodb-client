@@ -35,7 +35,7 @@ const AddCoffe = () => {
                 title: 'Success!',
                 text: 'Coffe added successfully',
                 icon: 'success',
-                confirmButtonText: 'Cool'
+                confirmButtonText: 'Done'
               })
         }
     })
