@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import AddCoffe from './components/AddCoffe.jsx';
 import UpdateCoffe from './components/UpdateCoffe.jsx';
+import Login from './components/Login.jsx';
+import Signup from './components/Signup.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
     path : "updateCoffe/:id",
     element : <UpdateCoffe></UpdateCoffe>,
     loader : ({params})=> fetch(`http://localhost:5000/coffe/${params.id}`)
+  },
+  {
+    path : "login",
+    element : <Login></Login>
+  },
+  {
+    path : "signup",
+    element : <Signup></Signup>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
